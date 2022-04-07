@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando a dom</title>
+    <style>
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 50px;
+    margin: 40px auto;  
+    justify-content: space-around;
+}
+.botoes #b1, #b2{
+    height: 70px;
+    width: 150px;
+    font-weight: bold;
+
+}
+body{
+    background-color: rgb(43, 39, 39);
+    color: white
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <h1 class="titulo1">Manipular a dom</h1>
+        <p id="p">Top demais manipular isto!</p>
+        <h2 class="titulo2">Mudando isso aqui</h2>
+        <img src="./img/dia.jpg" id ="img" alt="" width="350px" height="250px">
+    </div>
+
+<div class="botoes">
+    <button id="b1" onclick="modificarParagrafo()">botão 1</button>
+    <button id="b2" onclick="mudarImagem()">botão 2</button>
+</div>
+
+    <script>
+        const p = document.getElementById("p")
+        const b = document.getElementById("b1")
+        const i = document.getElementById("img")
+        const b2 = document.GetElementById("b2")
+
+        function modificarParagrafo() {
+            p.style.color = "red"
+            p.style.fontFamily = "Arial Black"
+            p.style.fontSize = "25pt"
+            p.style.border = "1px solid green"
+        }
+        function mudarImagem(){
+            i.src="./img/noite.jpg"
+            i.style.widht = "250px"
+            i.style.height = "150px"
+           i.style.borderRadius = "50px"
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
